@@ -2,76 +2,82 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-	color: white;
-	scroll-behavior:smooth;
+    color: white;
+    scroll-behavior: smooth;
 }
 
-body{
-	background-color: #00568F;
-	font-family: 'Poppins', sans-serif;
+body {
+    background-color: #3a5566;
+    font-family: 'Poppins', sans-serif;
+    background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
 }
 
-nav 
-{
+/* Séparateur */
+.separator {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.separator svg {
+    display: block;
+    width: 100%;
+    height: 100px;
+}
+
+/* Navigation */
+nav {
     background-color: black;
     position: fixed;
-	top: 0;
+    top: 0;
     width: 100%;
     margin: 0;
     padding: 0;
 }
 
-nav ul 
-{
+nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
 }
 
-nav ul li 
-{
+nav ul li {
     padding: 20px 30px;
 }
 
-nav ul li a 
-{
-	font-size: 150%;
+nav ul li a {
+    font-size: 150%;
     color: white;
     text-decoration: none;
 }
 
-nav ul li a:hover
-{
+nav ul li a:hover {
     color: rgb(141, 176, 230);
-    transform: scale(1.1); /* Agrandit légèrement le bouton */
+    transform: scale(1.1);
 }
 
-
-#Accueil
-{
-	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+/* Accueil */
+#Accueil {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
                       url("../../images/Inazuma-Eleven.avif");
-    background-size: cover; 
-    background-repeat: no-repeat; 
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 100%;
     height: 100vh;
     margin-top: 2%;
 }
 
-.Accueil
-{
-	text-align: center;
-	padding-top: 15%;
+.Accueil {
+    text-align: center;
+    padding-top: 15%;
 }
 
-h1
-{
-	font-size: 15vh;
+h1 {
+    font-size: 15vh;
 }
 
-.Accueil button 
-{
+.Accueil button {
     background-color: orange;
     margin-top: 3%;
     font-size: 200%;
@@ -83,81 +89,164 @@ h1
     transition: background-color 0.3s, transform 0.2s;
 }
 
-.Accueil button:hover 
-{
+.Accueil button:hover {
     background-color: rgb(245, 219, 172);
-    transform: scale(1.1); 
+    transform: scale(1.1);
 }
 
-#Annonce
-{
+/* Annonce */
+#Annonce {
     width: 100%;
-    height: 25vh;
-	display: flex;
+    height: 17vh;
+    display: flex;
 }
 
-#Annonce div
-{
-	background-color: #3B3B3B;
-	font-size: 1.5vh;
-	align-items: center;
-	margin-top: 2%;
-	padding: 1%;
-	margin-left: 8%;
-	height: 60%;
-	border: 2px rgb(255, 255, 255) solid;
-	border-radius: 50px;
+#Annonce div {
+    background-color: orange;
+    font-size: 1.5vh;
+    align-items: center;
+    width: 45%;
+    padding: 1%;
+    margin: 0.5%;
+    margin-left: 3%;
+    border: 2px rgb(255, 255, 255) solid;
+    border-radius: 50px;
 }
 
-h6{
-	font-size: 2.2vh;
-	padding-bottom: 2%;
+@media screen and (max-width: 800px) {
+    #Annonce div {
+        font-size: 1.2vh;
+    }
 }
 
-#Présentation
-{
-	background-color: black;
+h6 {
+    font-size: 2.2vh;
+    padding-bottom: 2%;
 }
 
-h2{
-	padding-top: 5%;
-	font-size: 4vh;
-	text-align: center;
+h2 {
+    padding-top: 5%;
+    font-size: 4vh;
+    text-align: center;
 }
 
-#Présentation div
-{
-	margin-top: 5%;
-	margin-left: 10%;
-	display: flex;
+/* Présentation */
+#Présentation div {
+    margin-top: 5%;
+    margin-left: 10%;
+    display: flex;
 }
 
-#Présentation div img
-{
-	margin-left: 5%;
-	width: 25%;
+#Présentation div img {
+    margin-left: 5%;
+    width: 25%;
 }
 
-#Présentation div p
-{
-	background-color: #3B3B3B;
-	font-size: 1.9vh;
-	align-items: center;
-	margin-top: 3%;
-	padding: 1%;
-	margin-left: 8%;
-	height: 100%;
-	width: 40%;
-	border: 2px rgb(255, 255, 255) solid;
-	border-radius: 50px;
+#Présentation div p {
+    background-color: orange;
+    font-size: 1.9vh;
+    align-items: center;
+    margin-top: 3%;
+    padding: 1%;
+    margin-left: 8%;
+    height: 100%;
+    width: 40%;
+    border: 2px rgb(255, 255, 255) solid;
+    border-radius: 50px;
 }
 
 #Présentation p {
-	font-size: 2.2vh;
-	align-items: center;
-	margin-left: 20%;
-	margin-top: 5%;
-	padding-bottom: 5%;
+    font-size: 2.2vh;
+    align-items: center;
+    margin-left: 20%;
+    margin-top: 5%;
+    padding-bottom: 5%;
 }
 
+/* ----------------------------- */
+/* 🌟 RESPONSIVE : 420px et moins */
+/* ----------------------------- */
+@media screen and (max-width: 420px) {
 
+    /* Navigation en colonne */
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        padding: 10px;
+    }
+
+    nav ul li a {
+        font-size: 120%;
+    }
+
+    /* Accueil */
+    #Accueil {
+        height: 80vh;
+        margin-top: 10%;
+    }
+
+    h1 {
+        font-size: 8vh;
+    }
+
+    h2 {
+        font-size: 3vh;
+        padding: 5%;
+    }
+
+    .Accueil button {
+        font-size: 140%;
+        width: 50%;
+        height: 7vh;
+    }
+
+    /* Annonce en colonne */
+    #Annonce {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+
+    #Annonce div {
+        width: 90%;
+        font-size: 1.6vh;
+        margin-bottom: 10px;
+        margin-left: 0;
+    }
+
+    /* Présentation en colonne */
+    #Présentation div {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    #Présentation div img {
+        width: 80%;
+        margin-left: 0;
+    }
+
+    #Présentation div p {
+        width: 80%;
+        margin-left: 0;
+        font-size: 1.8vh;
+    }
+
+    /* Téléchargement */
+    #Telechargement button {
+        font-size: 140%;
+        width: 60%;
+        height: 7vh;
+    }
+
+    /* Footer */
+    footer {
+        text-align: center;
+        padding: 10px;
+        font-size: 1.4vh;
+    }
+}
